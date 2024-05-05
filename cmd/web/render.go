@@ -11,7 +11,7 @@ import (
 type templateData struct {
 	StringMap       map[string]string
 	IntMap          map[string]int
-	floatMap        map[string]float32
+	FloatMap        map[string]float32
 	Data            map[string]interface{}
 	CSRFToken       string
 	Flash           string
@@ -24,7 +24,7 @@ type templateData struct {
 
 var functions = template.FuncMap{}
 
-//go:embeded template
+//go:embed templates
 var templateFS embed.FS
 
 func (app *application) addDefaultData(td *templateData, r *http.Request) *templateData {
