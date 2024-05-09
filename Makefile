@@ -11,8 +11,6 @@ build: clean build_front build_back
 
 ## clean: cleans all binaries and runs go clean
 clean:
-	@echo ${STRIPE_SECRET}
-	@echo ${STRIPE_KEY}
 	@echo "Cleaning..."
 	@- rm -f dist/*
 	@go clean
